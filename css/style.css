@@ -1,0 +1,236 @@
+:root {
+  --primary: #3a86ff;
+  --secondary: #4cc9f0;
+  --bg-primary: #212529;
+  --bg-secondary: #343a40;
+  --text: white;
+  --gray: #dee2e6;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  background-color: var(--bg-primary);
+  width: 100%;
+  height: auto;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: 1fr;
+  column-gap: 30px;
+}
+.container aside {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  background-color: var(--bg-secondary);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+}
+.container aside .profile {
+  margin: 0 auto;
+  height: 35vh;
+  padding-top: 10px;
+}
+.container aside .profile img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 0px 3px var(--text);
+}
+.container aside .contact {
+  height: 190px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.container aside .contact .adresse p, .container aside .contact .email p, .container aside .contact .tel p {
+  color: var(--text);
+  font-size: 17px;
+  font-style: italic;
+}
+.container aside .contact .expe-professionnel .item .experience .titre, .container .expe-professionnel .item .experience aside .contact .titre, .container aside .contact .langue .item2 > h1, .container aside .langue .contact .item2 > h1, .container aside .contact .langue .item1 > h1, .container aside .langue .contact .item1 > h1, .container aside .contact .competences .item2 > h1, .container aside .competences .contact .item2 > h1, .container aside .contact .competences .item1 > h1, .container aside .competences .contact .item1 > h1, .container aside .contact .adresse h1, .container aside .contact .email h1, .container aside .contact .tel h1 {
+  color: var(--text);
+  font-size: 15px;
+  font-family: "alumni sans", sans-serif;
+}
+.container aside .contact > h1 {
+  font-family: "abel", sans-serif;
+  color: var(--text);
+  letter-spacing: 0.3rem;
+  font-size: 18px;
+}
+.container aside .competences {
+  margin-top: 50px;
+  height: auto;
+}
+.container aside .competences .expe-professionnel .item .experience .titre, .container .expe-professionnel .item .experience aside .competences .titre, .container aside .competences .item2 > h1, .container aside .competences .item1 > h1, .container aside .competences .contact .tel h1, .container aside .contact .tel .competences h1, .container aside .competences .contact .email h1, .container aside .contact .email .competences h1, .container aside .competences .contact .adresse h1, .container aside .contact .adresse .competences h1 {
+  color: var(--text);
+  font-size: 15px;
+  font-family: "alumni sans", sans-serif;
+  margin-bottom: 10px;
+}
+.container aside .competences .item2 .barre, .container aside .competences .item1 .barre {
+  width: 100%;
+  height: 2px;
+  background-color: var(--text);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.container aside .competences .item2 .barre .cercle, .container aside .competences .item1 .barre .cercle {
+  width: 15px;
+  height: 15px;
+  background-color: var(--secondary);
+  border-radius: 50%;
+}
+.container aside .competences .item2 .barre .niveau, .container aside .competences .item1 .barre .niveau {
+  height: 4px;
+  background-color: var(--secondary);
+}
+.container aside .competences > h1 {
+  font-family: "abel", sans-serif;
+  color: var(--text);
+  letter-spacing: 0.3rem;
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+.container aside .competences .item1 {
+  margin-bottom: 30px;
+}
+.container aside .competences .item1 .barre .niveau {
+  width: 70%;
+}
+.container aside .competences .item2 .barre .niveau {
+  width: 70%;
+}
+.container aside .langue {
+  margin-top: 50px;
+  height: auto;
+}
+.container aside .langue .expe-professionnel .item .experience .titre, .container .expe-professionnel .item .experience aside .langue .titre, .container aside .langue .item2 > h1, .container aside .langue .item1 > h1, .container aside .langue .contact .tel h1, .container aside .contact .tel .langue h1, .container aside .langue .contact .email h1, .container aside .contact .email .langue h1, .container aside .langue .contact .adresse h1, .container aside .contact .adresse .langue h1 {
+  color: var(--text);
+  font-size: 15px;
+  font-family: "alumni sans", sans-serif;
+  margin-bottom: 10px;
+}
+.container aside .langue > h1 {
+  font-family: "abel", sans-serif;
+  color: var(--text);
+  letter-spacing: 0.3rem;
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+.container aside .langue .item1 {
+  margin-bottom: 30px;
+}
+.container aside .langue .item1 .etoile {
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+}
+.container aside .langue .item2 .etoile {
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+}
+.container main {
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+.container main header {
+  height: 35vh;
+  background: linear-gradient(var(--primary), var(--secondary));
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container main header .nom {
+  height: 25%;
+}
+.container main header .nom p {
+  letter-spacing: 0.5rem;
+  font-size: 45px;
+  font-family: "abel", sans-serif;
+  font-weight: 0;
+  color: white;
+  transition: all 1s;
+}
+.container main header .nom p:hover {
+  transform: scale(1.5);
+}
+.container main header .poste {
+  letter-spacing: 0.2rem;
+  color: white;
+  opacity: 0.7;
+  transition: all 1s;
+}
+.container main header .poste:hover {
+  transform: scale(1.5);
+}
+.container .description {
+  padding: 40px 50px 0 0;
+}
+.container .description .expe-professionnel > h1, .container .description .profile-professionnel h1 {
+  color: var(--text);
+  padding-bottom: 30px;
+  font-size: 18px;
+  letter-spacing: 0.5rem;
+  font-family: "alumni sans", sans-serif;
+}
+.container .description .profile-professionnel p {
+  color: var(--text);
+}
+.container .expe-professionnel {
+  margin-top: 80px;
+}
+.container .expe-professionnel .item .experience .titre, .container .expe-professionnel aside .contact .tel h1, .container aside .contact .tel .expe-professionnel h1, .container .expe-professionnel aside .contact .email h1, .container aside .contact .email .expe-professionnel h1, .container .expe-professionnel aside .contact .adresse h1, .container aside .contact .adresse .expe-professionnel h1, .container .expe-professionnel aside .competences .item1 > h1, .container aside .competences .expe-professionnel .item1 > h1, .container .expe-professionnel aside .competences .item2 > h1, .container aside .competences .expe-professionnel .item2 > h1, .container .expe-professionnel aside .langue .item1 > h1, .container aside .langue .expe-professionnel .item1 > h1, .container .expe-professionnel aside .langue .item2 > h1, .container aside .langue .expe-professionnel .item2 > h1 {
+  font-size: 15px;
+  font-family: "alamni sans", sans-serif;
+  color: var(--text);
+  letter-spacing: 0.3rem;
+  padding-bottom: 5px;
+}
+.container .expe-professionnel .item .experience .entreprise {
+  font-size: 15px;
+  font-family: "alamni sans", sans-serif;
+  color: var(--gray);
+}
+.container .expe-professionnel .item .experience .detail {
+  margin-top: 30px;
+  color: var(--text);
+}
+.container .expe-professionnel .item {
+  display: flex;
+}
+.container .expe-professionnel .item .date {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+}
+.container .expe-professionnel .item .date p {
+  color: var(--text);
+  font-size: 15px;
+  font-family: "alamni sans", sans-serif;
+}
+.container .expe-professionnel .item .date .trait {
+  width: 6px;
+  height: 1px;
+  background-color: var(--text);
+}
+.container .expe-professionnel .item .experience {
+  margin-left: 20px;
+  padding-left: 15px;
+  border-left: 1px solid var(--text);
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,348 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  background-color: var(--bg-primary);
+  width: 100%;
+  height: auto;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: 1fr;
+  column-gap: 30px;
+
+  aside {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    background-color: var(--bg-secondary);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+
+    .profile {
+      margin: 0 auto;
+      height: 35vh;
+      padding-top: 10px;
+      img {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        box-shadow: 0px 0px 0px 3px var(--text);
+      }
+    }
+
+    // contact
+    .contact {
+      height: 190px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      %para {
+        color: var(--text);
+        font-size: 17px;
+        font-style: italic;
+      }
+
+      %titre {
+        color: var(--text);
+        font-size: 15px;
+        font-family: "alumni sans", sans-serif;
+      }
+
+      > h1 {
+        font-family: "abel", sans-serif;
+        color: var(--text);
+        letter-spacing: 0.3rem;
+        font-size: 18px;
+      }
+
+      .tel {
+        h1 {
+          @extend %titre;
+        }
+
+        p {
+          @extend %para;
+        }
+      }
+
+      .email {
+        h1 {
+          @extend %titre;
+        }
+
+        p {
+          @extend %para;
+        }
+      }
+
+      .adresse {
+        h1 {
+          @extend %titre;
+        }
+
+        p {
+          @extend %para;
+        }
+      }
+    }
+
+    // competences
+    .competences {
+      margin-top: 50px;
+      height: auto;
+
+      %titre {
+        color: var(--text);
+        font-size: 15px;
+        font-family: "alumni sans", sans-serif;
+        margin-bottom: 10px;
+      }
+
+      %barres {
+        width: 100%;
+        height: 2px;
+        background-color: var(--text);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+      }
+
+      %cercle {
+        width: 15px;
+        height: 15px;
+        background-color: var(--secondary);
+        border-radius: 50%;
+      }
+
+      %niveau {
+        height: 4px;
+        background-color: var(--secondary);
+      }
+
+      > h1 {
+        font-family: "abel", sans-serif;
+        color: var(--text);
+        letter-spacing: 0.3rem;
+        margin-bottom: 20px;
+        font-size: 18px;
+      }
+
+      .item1 {
+        margin-bottom: 30px;
+        > h1 {
+          @extend %titre;
+        }
+
+        .barre {
+          @extend %barres;
+
+          .niveau {
+            @extend %niveau;
+            width: 70%;
+          }
+          .cercle {
+            @extend %cercle;
+          }
+        }
+      }
+
+      .item2 {
+        > h1 {
+          @extend %titre;
+        }
+
+        .barre {
+          @extend %barres;
+
+          .niveau {
+            @extend %niveau;
+            width: 70%;
+          }
+          .cercle {
+            @extend %cercle;
+          }
+        }
+      }
+    }
+
+    // langue
+    .langue {
+      margin-top: 50px;
+      height: auto;
+
+      %titre {
+        color: var(--text);
+        font-size: 15px;
+        font-family: "alumni sans", sans-serif;
+        margin-bottom: 10px;
+      }
+
+      > h1 {
+        font-family: "abel", sans-serif;
+        color: var(--text);
+        letter-spacing: 0.3rem;
+        margin-bottom: 20px;
+        font-size: 18px;
+      }
+
+      .item1 {
+        margin-bottom: 30px;
+
+        > h1 {
+          @extend %titre;
+        }
+        .etoile {
+          width: 60%;
+          display: flex;
+          justify-content: space-between;
+        }
+      }
+
+      .item2 {
+        > h1 {
+          @extend %titre;
+        }
+        .etoile {
+          width: 60%;
+          display: flex;
+          justify-content: space-between;
+        }
+      }
+    }
+  }
+
+  main {
+    grid-column: 2/3;
+    grid-row: 1/2;
+
+    // entete
+    header {
+      height: 35vh;
+      background: linear-gradient(var(--primary), var(--secondary));
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .nom {
+        height: 25%;
+
+        p {
+          letter-spacing: 0.5rem;
+          font-size: 45px;
+          font-family: "abel", sans-serif;
+          font-weight: 0;
+          color: white;
+          transition: all 1s;
+
+          &:hover {
+            transform: scale(1.5);
+          }
+        }
+      }
+
+      .poste {
+        letter-spacing: 0.2rem;
+        color: white;
+        opacity: 0.7;
+        transition: all 1s;
+        &:hover {
+          transform: scale(1.5);
+        }
+      }
+    }
+  }
+
+  // description
+  .description {
+    padding: 40px 50px 0 0;
+    %gd-titre {
+      color: var(--text);
+      padding-bottom: 30px;
+      font-size: 18px;
+      letter-spacing: 0.5rem;
+      font-family: "alumni sans", sans-serif;
+    }
+
+    // profile professionnel
+    .profile-professionnel {
+      h1 {
+        @extend %gd-titre;
+      }
+      p {
+        color: var(--text);
+      }
+    }
+  }
+
+  .expe-professionnel {
+    margin-top: 80px;
+    %titre {
+      font-size: 15px;
+      font-family: "alamni sans", sans-serif;
+      color: var(--text);
+      letter-spacing: 0.3rem;
+      padding-bottom: 5px;
+    }
+
+    %entreprise {
+      font-size: 15px;
+      font-family: "alamni sans", sans-serif;
+      color: var(--gray);
+    }
+
+    %detail {
+      margin-top: 30px;
+      color: var(--text);
+    }
+    > h1 {
+      @extend %gd-titre;
+    }
+    .item {
+      display: flex;
+
+      .date {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 50px;
+        p {
+          color: var(--text);
+          font-size: 15px;
+          font-family: "alamni sans", sans-serif;
+        }
+
+        .trait {
+          width: 6px;
+          height: 1px;
+          background-color: var(--text);
+        }
+      }
+
+      .experience {
+        margin-left: 20px;
+        padding-left: 15px;
+        border-left: 1px solid var(--text);
+
+        .titre {
+          @extend %titre;
+        }
+        .entreprise {
+          @extend %entreprise;
+        }
+
+        .detail {
+          @extend %detail;
+        }
+      }
+    }
+  }
+}
